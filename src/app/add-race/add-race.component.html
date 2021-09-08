@@ -1,0 +1,19 @@
+<h1>Ajouter nouvelle course</h1>
+
+<form (ngSubmit)="onSubmit()">
+
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date" [(ngModel)]="newRace.date" />
+
+    <label for="location">localisation</label>
+    <input type="text" name="location" id="location" [(ngModel)]="newRace.location" />
+
+    <label>Participants</label>
+    <div *ngFor="let p of allPonies; let i = index;">
+
+        {{p.name}}<input type="checkbox" name="{{p.name}}" (change)="poniesBool[i]">
+    </div>
+
+
+    <button type="submit">Enregister</button>
+</form>

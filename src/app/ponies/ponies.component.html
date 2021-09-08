@@ -1,0 +1,10 @@
+<p>Liste des poneys</p>
+
+<ul>
+    <li *ngFor="let p of ponies; let i = index;">
+    <app-pony-detail [pony]="p"></app-pony-detail>
+    </li>
+</ul>
+
+
+

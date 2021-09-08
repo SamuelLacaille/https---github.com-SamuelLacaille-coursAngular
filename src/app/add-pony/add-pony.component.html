@@ -1,0 +1,16 @@
+<h1>Ajouter nouveau pony</h1>
+
+<form (ngSubmit)="onSubmit()">
+
+    <label for="name">nom</label>
+    <input type="text" name="name" id="name" [(ngModel)]="newPony.name" />
+
+    <label for="couleur">couleur</label>
+    <input type="text" name="couleur" id="couleur" [(ngModel)]="newPony.color" />
+
+
+    <label for="age">age</label>
+    <input type="number" name="age" id="age" [(ngModel)]="newPony.age" />
+
+    <button type="submit">Enregister</button>
+</form>
