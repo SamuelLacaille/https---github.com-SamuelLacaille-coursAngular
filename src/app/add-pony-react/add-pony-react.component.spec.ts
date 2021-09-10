@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddPonyReactComponent } from './add-pony-react.component';
 
@@ -23,3 +23,4 @@ describe('AddPonyReactComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+*/

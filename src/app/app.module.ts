@@ -22,6 +22,7 @@ import { AddRaceComponent } from './add-race/add-race.component';
 import { AddPonyReactComponent } from './add-pony-react/add-pony-react.component';
 import { AddRaceReactComponent } from './add-race-react/add-race-react.component';
 import { UserGuard } from './user.guard';
+import { ButtonModule } from 'primeng/button';
 
 
 
@@ -57,6 +58,7 @@ const ROUTES: Routes =[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ButtonModule,
     HttpClientModule,
     InputTextModule,
     ReactiveFormsModule,
