@@ -2,15 +2,21 @@
 
 <form [formGroup]="ponyForm" (ngSubmit)="onSubmit()">
 
-    <label for="name">nom</label>
-    <input type="text" name="name" id="name" formControlName="name" />
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="name"> 
+        <label for="float-input">Nom</label>
+    </span>
 
-    <label for="couleur">couleur</label>
-    <input type="text" name="couleur" id="couleur" formControlName="color" />
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="color"> 
+        <label for="float-input">Color</label>
+    </span>
 
-
-    <label for="age">age</label>
-    <input type="number" name="age" id="age" formControlName="age" />
+    <span class="p-float-label">
+        <input type="number" name="age"  id="float-input" formControlName="age" />
+        <label for="float-input">Age</label>
+    </span>
+    
 
     <button type="submit">Enregister</button>
 </form>

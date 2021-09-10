@@ -2,3 +2,11 @@
 <a routerLink="races">Courses</a>
 <a routerLink="add-pony">ajouter poney</a>
 <a routerLink="add-race">ajouter course</a>
+
+<form (ngSubmit)="onSubmit()">
+    <input type="text" name="user" [(ngModel)]="username" [hidden]="!askcon" />
+    <button *ngIf="askcon" type="submit">OK</button>
+    <button *ngIf="askcon == false " type="submit">OUT</button> 
+</form>
+
+

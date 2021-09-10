@@ -5,6 +5,8 @@ import { Pony } from '../pony';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PonyService } from '../pony.service';
+import {InputTextModule} from 'primeng/inputtext';
+
 
 @Component({
   selector: 'app-add-pony-react',
@@ -20,7 +22,7 @@ export class AddPonyReactComponent implements OnInit {
     age: [0, Validators.required]
   });
 
-  constructor(private fb: FormBuilder, private router: Router, private ponyService: PonyService) { }
+  constructor(private fb: FormBuilder, private router: Router, private ponyService: PonyService, private itm: InputTextModule) { }
 
   ngOnInit(): void {
   }

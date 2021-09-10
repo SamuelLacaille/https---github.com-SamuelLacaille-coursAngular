@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  username : string = "";
+  askcon : boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(): void{
+    if(this.askcon){
+      sessionStorage.setItem('idUser', this.username);
+      this.askcon=false;
+    }else{
+      sessionStorage.removeItem('idUser');
+      this.username="";
+      this.askcon=true;
+    }
   }
 
 }

@@ -13,23 +13,25 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import {InputTextModule} from 'primeng/inputtext';
 import { RaceDetailComponent } from './race-detail/race-detail.component';
 import { LocationRacePipe } from './location-race.pipe';
 import { AddPonyComponent } from './add-pony/add-pony.component';
 import { MenuComponent } from './menu/menu.component';
 import { AddRaceComponent } from './add-race/add-race.component';
 import { AddPonyReactComponent } from './add-pony-react/add-pony-react.component';
+import { AddRaceReactComponent } from './add-race-react/add-race-react.component';
+import { UserGuard } from './user.guard';
 
 
 
 const ROUTES: Routes =[
   {path: "", component: PoniesComponent },
   {path: "races", component: RacesComponent},
-  {path: "add-pony", component: AddPonyReactComponent},
-  {path: "update-pony/:id", component: AddPonyComponent},
-  {path: "add-race", component: AddRaceComponent},
-  {path: "update-race/:id_race", component: AddRaceComponent }
+  {path: "add-pony", component: AddPonyReactComponent, canActivate: [UserGuard]},
+  {path: "update-pony/:id", component: AddPonyComponent, canActivate: [UserGuard]},
+  {path: "add-race", component: AddRaceComponent, canActivate: [UserGuard]},
+  {path: "update-race/:id_race", component: AddRaceComponent, canActivate: [UserGuard] }
 
 ]
 
@@ -48,6 +50,7 @@ const ROUTES: Routes =[
     AddRaceComponent,
     
     AddPonyReactComponent,
+         AddRaceReactComponent,
     
   ],
   imports: [
@@ -55,6 +58,7 @@ const ROUTES: Routes =[
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    InputTextModule,
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
